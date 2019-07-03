@@ -47,3 +47,5 @@ gem "graphql", "~> 1.9"
 
 gem 'graphiql-rails', group: :development
 gem "pry", "~> 0.12.2"
+
+gem "devise", "~> 4.6"
