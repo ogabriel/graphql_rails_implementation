@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 class GraphqlController < ApplicationController
   def execute
-    binding.pry
     variables = ensure_hash(params[:variables])
     query = params[:query]
     operation_name = params[:operationName]
@@ -10,8 +11,9 @@ class GraphqlController < ApplicationController
     }
     result = GraphqlRailsSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
     render json: result
-  rescue => e
+  rescue StandardError => e
     raise e unless Rails.env.development?
+
     handle_error_in_development e
   end
 
@@ -35,10 +37,10 @@ class GraphqlController < ApplicationController
     end
   end
 
-  def handle_error_in_development(e)
-    logger.error e.message
-    logger.error e.backtrace.join("\n")
+  def handle_error_in_development(err)
+    logger.error err.message
+    logger.error err..backtrace.join("\n")
 
-    render json: { error: { message: e.message, backtrace: e.backtrace }, data: {} }, status: 500
+    render json: { error: { message: err.message, backtrace: err.backtrace }, data: {} }, status: 500
   end
 end
