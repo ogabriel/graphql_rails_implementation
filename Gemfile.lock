@@ -65,6 +65,8 @@ GEM
       dotenv (= 2.7.4)
       railties (>= 3.2, < 6.1)
     erubi (1.8.0)
+    faker (1.9.5)
+      i18n (>= 0.7)
     ffi (1.11.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -200,6 +202,7 @@ DEPENDENCIES
   byebug
   devise (~> 4.6)
   dotenv-rails (~> 2.7)
+  faker (~> 1.9)
   graphiql-rails
   graphql (~> 1.9)
   jbuilder (~> 2.5)

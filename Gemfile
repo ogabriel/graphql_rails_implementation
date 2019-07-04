@@ -53,3 +53,5 @@ gem 'graphiql-rails', group: :development
 gem 'devise', '~> 4.6'
 
 gem "awesome_print", "~> 1.8"
+
+gem "faker", "~> 1.9"
