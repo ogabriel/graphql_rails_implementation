@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 2019_07_03_125543) do
     t.string "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.uuid "users_id"
-    t.index ["users_id"], name: "index_quotes_on_users_id"
+    t.uuid "user_id"
+    t.index ["user_id"], name: "index_quotes_on_user_id"
   end
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|

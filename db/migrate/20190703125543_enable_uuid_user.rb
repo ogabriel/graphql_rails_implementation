@@ -13,7 +13,7 @@ class EnableUuidUser < ActiveRecord::Migration[5.2]
     execute "ALTER TABLE users ADD PRIMARY KEY (id);"
 
     change_table :quotes do |q|
-      q.references :users, type: :uuid
+      q.references :user, type: :uuid
     end
 
     # add_reference :quotes, :user, foreign_key: true
