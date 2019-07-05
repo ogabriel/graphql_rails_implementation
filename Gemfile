@@ -33,6 +33,7 @@ group :development, :test do
   gem 'pry', '~> 0.12.2'
   gem 'rubocop', '~> 0.72.0'
   gem 'rubocop-performance', '~> 1.4'
+  gem 'faker', '~> 1.9'
 end
 
 group :development do
@@ -52,6 +53,5 @@ gem 'graphiql-rails', group: :development
 
 gem 'devise', '~> 4.6'
 
-gem "awesome_print", "~> 1.8"
+gem 'awesome_print', '~> 1.8'
 
-gem "faker", "~> 1.9"

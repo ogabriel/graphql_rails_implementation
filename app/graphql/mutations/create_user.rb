@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Mutations
   class CreateUser < GraphQL::Schema::RelayClassicMutation
     graphql_name 'CreateUser'

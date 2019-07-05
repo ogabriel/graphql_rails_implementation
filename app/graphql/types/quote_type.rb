@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Types
   class QuoteType < Types::BaseObject
     field :id, String, null: false
