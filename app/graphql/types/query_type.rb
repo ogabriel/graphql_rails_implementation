@@ -19,5 +19,13 @@ module Types
     def quotes
       Quote.all
     end
+
+    field :quote, Types::QuoteType, null: false do
+      argument :id, String, required: true
+    end
+
+    def quote(id:)
+      Quote.find(id)
+    end
   end
 end
