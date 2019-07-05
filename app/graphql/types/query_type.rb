@@ -3,7 +3,6 @@
 module Types
   class QueryType < Types::BaseObject
     field :users, [Types::UserType], null: false
-
     def users
       User.all
     end
@@ -14,6 +13,11 @@ module Types
 
     def user(id:)
       User.find(id)
+    end
+
+    field :quotes, [Types::QuoteType], null: false
+    def quotes
+      Quote.all
     end
   end
 end
