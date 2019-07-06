@@ -2,6 +2,7 @@
 
 module Types
   class MutationType < Types::BaseObject
+    field :updateUser, mutation: Mutations::UpdateUser
     field :deleteQuote, mutation: Mutations::DeleteQuote
     field :createQuote, mutation: Mutations::CreateQuote
     field :deleteUser, mutation: Mutations::DeleteUser
