@@ -22,6 +22,7 @@ group :development, :test do
   gem 'rubocop', '~> 0.72.0'
   gem 'rubocop-performance', '~> 1.4'
   gem 'faker', '~> 1.9'
+  gem 'dotenv-rails', '~> 2.7'
 end
 
 group :development do
@@ -29,11 +30,11 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'dotenv-rails', '~> 2.7'
 end
 
 group :test do
   gem 'factory_bot_rails', '~> 5.0'
   gem 'rspec-rails', '~> 3.8'
   gem 'database_cleaner', '~> 1.7'
+  gem 'shoulda-matchers', '~> 4.1'
 end
