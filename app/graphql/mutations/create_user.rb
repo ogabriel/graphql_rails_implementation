@@ -5,7 +5,7 @@ module Mutations
     graphql_name 'CreateUser'
 
     field :user, Types::UserType, null: true
-    field :result, Boolean, null: true
+    field :successful, Boolean, null: true
 
     argument :email, String, required: false
     argument :password, String, required: false
@@ -14,7 +14,7 @@ module Mutations
       user = User.create(email: args[:email], password: args[:password])
       {
         user: user,
-        result: user.errors.blank?
+        successful: user.errors.blank?
       }
     end
   end
