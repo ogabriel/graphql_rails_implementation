@@ -5,16 +5,21 @@ module Mutations
     graphql_name 'DeleteUser'
 
     field :user, Types::UserType, null: true
-    field :result, Boolean, null: true
+    field :successful, Boolean, null: true
 
     argument :id, String, required: true
+    argument :password, String, required: true
 
     def resolve(**args)
       user = User.find(args[:id])
-      user.destroy
+      if user.valid_password?(args[:password])
+        user.destroy
+      else
+        user.errors.add(:password, 'password not valid')
+      end
       {
         user: user,
-        result: user.errors.blank?
+        successful: user.errors.blank?
       }
     end
   end
