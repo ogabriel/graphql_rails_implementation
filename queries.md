@@ -16,6 +16,16 @@ query {
 
 ### user(id:)
 ```js
+{
+  user(id: "97986516-3d5b-43be-bd57-f419adb97f6e") {
+    id
+    email
+    quotes {
+      id
+      message
+    }
+  }
+}
 ```
 
 ### quotes
