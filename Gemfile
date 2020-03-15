@@ -13,7 +13,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'graphql', '~> 1.9'
 gem 'graphiql-rails', group: :development
-gem 'devise', '~> 4.6'
+gem 'devise', '~> 4.7'
 gem 'awesome_print', '~> 1.8'
 
 group :development, :test do
